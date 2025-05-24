@@ -1,0 +1,14 @@
+{
+  "name": "andrepeat",
+  "version": "1.0.0",
+  "description": "And Repeat - Art that builds brands",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "start": "npm run serve"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "nunjucks": "^3.2.4"
+  }
+} 

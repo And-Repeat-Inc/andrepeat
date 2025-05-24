@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | And Repeat</title>
+  <link rel="stylesheet" href="/style.css">
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body>
+  <header class="site-head">
+    <a class="logo" href="/" aria-label="And Repeat - Home">And Repeat</a>
+    <span class="tagline">Art that builds brands</span>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="/art">Art</a>
+      <a href="/design">Design</a>
+      <a href="/typography">Typography</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+
+  {{ content | safe }}
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>About Us</h3>
+        <p>And Repeat creates simple geometric designs that build lasting brand identities. We focus on clarity, impact, and meaningful repetition in visual communication.</p>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul class="footer-links">
+          <li><a href="#">Brand Identity</a></li>
+          <li><a href="#">Digital Design</a></li>
+          <li><a href="#">Print Design</a></li>
+          <li><a href="#">Motion Graphics</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Connect</h3>
+        <ul class="footer-links">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Behance</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@andrepeat.com">hello@andrepeat.com</a></li>
+          <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+          <li><a href="#">Schedule a Call</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {{ "now" | date: "%Y" }} And Repeat. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html> 

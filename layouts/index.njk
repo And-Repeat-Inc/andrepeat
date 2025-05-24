@@ -1,0 +1,40 @@
+---
+layout: base.njk
+---
+
+<div class="hero-wrapper">
+  <section class="hero" aria-label="Featured work slideshow">
+    <div class="hero">
+      {% for project in collections.projects | reverse %}
+        {% if project.data.featured %}
+          {% if project.data.media_type == 'video' %}
+            <video class="hero-img" autoplay muted loop playsinline preload="auto">
+              <source src="{{ project.data.media_url }}" type="video/mp4">
+            </video>
+          {% else %}
+            <img src="{{ project.data.media_url }}" alt="{{ project.data.title }}" class="hero-img">
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="slideshow-controls" aria-label="Slideshow controls">
+      <button class="prev" aria-label="Previous slide">←</button>
+      <button class="next" aria-label="Next slide">→</button>
+    </div>
+  </section>
+</div>
+
+<section class="projects" aria-label="Project showcase">
+  {% for project in collections.projects | reverse %}
+    <a class="project" href="{{ project.url }}">
+      {% if project.data.media_type == 'video' %}
+        <video class="wide-img" autoplay muted loop playsinline>
+          <source src="{{ project.data.media_url }}" type="video/mp4">
+        </video>
+      {% else %}
+        <img src="{{ project.data.media_url }}" alt="{{ project.data.title }}" class="wide-img" loading="lazy">
+      {% endif %}
+      <span class="hover-blurb">{{ project.data.title }}<br>{{ project.data.description }}</span>
+    </a>
+  {% endfor %}
+</section> 
